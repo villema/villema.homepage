@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Homepage</title>
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    <style>
+       
+        body {
+            background-image: url("./imgs/background.png");
+            background-repeat: no-repeat;
+            
+            font-family: 'Orbitron', sans-serif;
+            color:#dbf2ff;
+           
+
+        }
+
+        ul li a:visited
+        {
+            color:rgb(166, 27, 27);
+
+        }
+
+        ul li a:hover {
+            background-color: rgb(255, 255, 255);
+            color: #333;
+        }
+        
+        
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 100%;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+        }
+        .navbar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            transition: background-color 0.5s ease-in-out;
+        }
+        .navbar a:hover {
+            background-color: rgb(255, 255, 255);
+            color: #333;
+        }
+        .main-content {
+            margin-left: 230px;
+            margin-top: 0%;
+            padding: 20px;
+        }
+        #my-projects {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h3><a href="#" onclick="hideMyProjects()" style = "color:rgb(181, 3, 3)">My Homepage</a></h2>
+        <a href="#" onclick="showMyProjects()">My Projects</a>
+        <a href="https://www.linkedin.com/in/ville-mansikka-aho/">About Me</a>
+    </div>
+    <div class="main-content">
+        <h1>Welcome to my personal homepage!</h1>
+        <div id="my-projects">
+            <h2>My Projects</h2>
+            <p>Here are some of my recent projects:</p>
+            <ul>
+                <li><a href="#">Project 1</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function showMyProjects() {
+            document.getElementById("my-projects").style.display = "block";
+        }
+
+        function hideMyProjects() {
+            document.getElementById("my-projects").style.display = "none";
+        }
+    </script>
+</body>
+</html>
